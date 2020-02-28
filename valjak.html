@@ -1,0 +1,57 @@
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<title>zapremina valjka</title>
+<style>
+body{
+background-image:url('math.jpeg');
+background-position:center;
+background-repeat:no-repeat;
+}
+#sablon{
+width:300px;
+height:300px;
+background-color:#038cfc;
+float:left;
+margin-left:300px;
+margin-top:200px;
+}
+#slika{
+width:300px;
+height:300px;
+background-color:#838a81;
+float:left;
+margin-top:200px;
+background-image:url(valjak.png);
+background-repeat:no-repeat;
+background-position:center;
+background-size:100%;
+}
+form{
+padding:50px;
+}
+</style>
+</head>
+<body>
+<div id="sablon">
+<form>
+Unesite visinu valjka:<input type="number" name="visina" id="visina" value=""</input> </br></br>
+Unesite poluprečnik valjka:<input type="number" name="radius" id="radius" value=""</input> </br>
+<input type="submit" value="izračunaj" " id="potvrda">
+</form>
+</div>
+<div id="slika">
+</div>
+</body>
+<script>
+document.getElementById("potvrda").addEventListener("click", myFunction);
+function myFunction(){
+var h=document.getElementById("visina").value;
+var r=document.getElementById("radius").value;
+const pi=3.14;
+var v= (r*r)*pi*h;
+alert("zapremina valjka je "+ v);
+}
+</script>
+
+</html>
